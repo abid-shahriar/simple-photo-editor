@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flexbox($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+#root {
+  max-width: 1500px;
+  background-color: #ddd;
+  min-height: 100vh;
+  margin: 0 auto;
+  // @include flexbox();
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex: 1 1;
+}
+
+.image-container {
+  flex: 1 1;
+  flex-basis: 70%;
+  padding: 20px;
+  @include flexbox();
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+.controls-container {
+  border: 1px solid red;
+  flex: 1 1;
+  flex-basis: 30%;
+}
