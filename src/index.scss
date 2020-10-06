@@ -13,19 +13,42 @@
   flex-direction: $direction;
 }
 
+body {
+  height: 100vh;
+  @include flexbox();
+  @media (max-width: 900px) {
+    min-height: 100vh;
+    height: auto;
+  }
+}
+
 #root {
   max-width: 1500px;
-  background-color: #ddd;
-  min-height: 100vh;
+  background-color: #fff;
+  height: 95vh;
   margin: 0 auto;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+
+  @media (max-width: 900px) {
+    min-height: 95vh;
+    height: auto;
+  }
+
   // @include flexbox();
 }
 
 .main-container {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   flex: 1 1;
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    min-height: 95vh;
+    height: auto;
+  }
 }
 
 .image-container {
@@ -43,14 +66,16 @@
     max-height: 100%;
     max-width: 100%;
     transition: 0.5;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
   }
 }
 .controls-container {
   flex: 1 1;
   flex-basis: 30%;
-  padding: 0 20px 0 0;
+  padding: 0 20px;
   @include flexbox(column);
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 }
 
 .slide-container {
@@ -63,9 +88,13 @@
   margin: 10px 0px;
   padding: 20px 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-
   border-radius: 5px;
   @include flexbox();
+
+  @media (max-width: 900px) {
+    margin: 5px 0px;
+    padding: 5px 5px;
+  }
   label {
     width: 40%;
     font-size: 20px;
@@ -112,6 +141,11 @@
   background-color: rgba(255, 99, 71, 0.7);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+
+  @media (max-width: 900px) {
+    margin: 20px 0 15px 0;
+  }
 
   &:hover {
     background-color: rgba(255, 99, 71, 0.9);
