@@ -11,6 +11,7 @@ function Contexts(props) {
   const [invert, setInvert] = useState(0);
   const [saturate, setSaturate] = useState(100);
   const [sepia, setSepia] = useState(0);
+  const [randomNum, setRandomNum] = useState(200);
 
   const filetrValues = {
     brightness,
@@ -21,6 +22,7 @@ function Contexts(props) {
     invert,
     saturate,
     sepia,
+    randomNum,
     setBrightness,
     setContrast,
     setHue,
@@ -29,6 +31,7 @@ function Contexts(props) {
     setInvert,
     setSaturate,
     setSepia,
+    setRandomNum,
   };
 
   return (

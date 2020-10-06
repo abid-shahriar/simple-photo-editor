@@ -5,7 +5,7 @@ function InputSlider({ name, setValue, value, min, max }) {
     setValue(e.target.value);
   };
   return (
-    <div>
+    <div className="input-slider">
       <label htmlFor={name}>{name}:</label>
       <input
         onChange={handleSlide}
