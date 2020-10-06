@@ -19,11 +19,13 @@ body {
   @media (max-width: 900px) {
     min-height: 100vh;
     height: auto;
+    min-width: 100vw;
   }
 }
 
 #root {
   max-width: 1500px;
+  min-width: 1200px;
   background-color: #fff;
   height: 95vh;
   margin: 0 auto;
@@ -33,6 +35,8 @@ body {
   @media (max-width: 900px) {
     min-height: 95vh;
     height: auto;
+    min-width: 100%;
+    border-radius: 0;
   }
 
   // @include flexbox();
@@ -45,7 +49,7 @@ body {
   flex: 1 1;
 
   @media (max-width: 900px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     min-height: 95vh;
     height: auto;
   }
