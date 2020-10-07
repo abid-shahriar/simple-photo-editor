@@ -64,6 +64,10 @@ body {
   justify-content: space-evenly;
   transition: 0.4s;
 
+  @media (max-width: 900px) {
+    padding: 10px;
+  }
+
   img {
     display: block;
     margin: 0 auto;
@@ -79,7 +83,10 @@ body {
   flex-basis: 30%;
   padding: 0 20px;
   @include flexbox(column);
-  // justify-content: space-evenly;
+
+  @media (max-width: 900px) {
+    padding-top: 10px;
+  }
 }
 
 .slide-container {
@@ -90,14 +97,17 @@ body {
 .input-slider {
   width: 100%;
   margin: 10px 0px;
-  padding: 20px 5px;
+  padding: 15px 5px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   @include flexbox();
 
   @media (max-width: 900px) {
-    margin: 5px 0px;
-    padding: 5px 5px;
+    margin: 0px 0px 5px 0px;
+    padding: 0px 0px 5px 0px;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.377);
+    border-radius: 0;
   }
   label {
     width: 40%;
@@ -109,6 +119,7 @@ body {
     width: 50%;
     appearance: none;
     outline: none;
+    cursor: pointer;
 
     &::-webkit-slider-runnable-track {
       background-color: rgba(255, 99, 71, 0.5);
@@ -146,9 +157,12 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-radius: 5px;
+  margin-top: 10px;
 
   @media (max-width: 900px) {
-    margin: 20px 0 15px 0;
+    margin: 10px 0 0px 0;
+    font-size: 16px;
+    padding: 8px 16px;
   }
 
   &:hover {
@@ -157,6 +171,12 @@ body {
 
   &:active {
     transform: scale(0.9);
+  }
+}
+
+.reste-btn {
+  @media (max-width: 900px) {
+    margin: 10px 0 5px 0;
   }
 }
 
@@ -172,9 +192,25 @@ body {
     position: absolute;
     z-index: 20;
     color: white;
-    font-size: 34px;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(20px);
+    font-size: clamp(18px, 5vw, 34px);
+    border-radius: 20px;
     transition: 0.4s;
+
+    @supports (backdrop-filter: blur()) {
+      & {
+        backdrop-filter: blur(20px);
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    @supports not (backdrop-filter: blur()) {
+      & {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+
+    @media (max-width: 900px) {
+      border-radius: 0;
+    }
   }
 }
