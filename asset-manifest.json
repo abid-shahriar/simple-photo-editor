@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simple-photo-editor/static/css/main.ccda6f14.chunk.css",
+    "main.css": "/simple-photo-editor/static/css/main.29a8bfac.chunk.css",
     "main.js": "/simple-photo-editor/static/js/main.448e3279.chunk.js",
     "main.js.map": "/simple-photo-editor/static/js/main.448e3279.chunk.js.map",
     "runtime-main.js": "/simple-photo-editor/static/js/runtime-main.44923051.js",
@@ -8,15 +8,15 @@
     "static/js/2.dcf3f3df.chunk.js": "/simple-photo-editor/static/js/2.dcf3f3df.chunk.js",
     "static/js/2.dcf3f3df.chunk.js.map": "/simple-photo-editor/static/js/2.dcf3f3df.chunk.js.map",
     "index.html": "/simple-photo-editor/index.html",
-    "precache-manifest.98538406e6257e34bc43e64678aefda7.js": "/simple-photo-editor/precache-manifest.98538406e6257e34bc43e64678aefda7.js",
+    "precache-manifest.88290d1633d11ddf0b6dd4fb25e736e8.js": "/simple-photo-editor/precache-manifest.88290d1633d11ddf0b6dd4fb25e736e8.js",
     "service-worker.js": "/simple-photo-editor/service-worker.js",
-    "static/css/main.ccda6f14.chunk.css.map": "/simple-photo-editor/static/css/main.ccda6f14.chunk.css.map",
+    "static/css/main.29a8bfac.chunk.css.map": "/simple-photo-editor/static/css/main.29a8bfac.chunk.css.map",
     "static/js/2.dcf3f3df.chunk.js.LICENSE.txt": "/simple-photo-editor/static/js/2.dcf3f3df.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.44923051.js",
     "static/js/2.dcf3f3df.chunk.js",
-    "static/css/main.ccda6f14.chunk.css",
+    "static/css/main.29a8bfac.chunk.css",
     "static/js/main.448e3279.chunk.js"
   ]
 }
